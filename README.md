@@ -24,38 +24,6 @@ Kurumsal mimariye uygun, N-Tier katmanlı, JWT tabanlı kimlik doğrulama, JPA O
 
 ---
 
-## 🚀 Hızlı Başlangıç
-
-### 1. PostgreSQL Veritabanını Başlatma
-Kök dizindeki Docker Compose dosyasını kullanarak PostgreSQL konteynerini çalıştırabilirsiniz:
-```bash
-docker-compose up -d
-```
-*Veritabanı bilgileri:* Port `5432`, DB `hospital_db`, Kullanıcı `postgres`, Şifre `postgres`
-
-### 2. Backend Uygulamasını Çalıştırma
-```bash
-cd backend
-mvn spring-boot:run
-```
-Backend `http://localhost:8080` portunda ayağa kalkacaktır.
-- **Swagger UI:** [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-- **OpenAPI JSON:** [http://localhost:8080/api-docs](http://localhost:8080/api-docs)
-
-Uygulama ilk kez çalıştığında `DataInitializer` devreye girerek aşağıdaki test hesaplarını otomatik oluşturur:
-- **Yönetici:** `admin@hospital.com` / `Admin123!` (Rol: `ADMIN`)
-- **Doktor (Kardiyoloji):** `mehmet.oz@hospital.com` / `Doctor123!` (Rol: `DOCTOR`)
-- **Doktor (Nöroloji):** `ayse.kaya@hospital.com` / `Doctor123!` (Rol: `DOCTOR`)
-- **Doktor (Çocuk):** `can.demir@hospital.com` / `Doctor123!` (Rol: `DOCTOR`)
-- **Hasta:** `ahmet.yilmaz@hospital.com` / `Patient123!` (Rol: `PATIENT`)
-
-### 3. Frontend Uygulamasını Çalıştırma
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Frontend `http://localhost:5173` portunda açılacaktır.
 
 ---
 
